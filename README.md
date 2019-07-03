@@ -11,6 +11,9 @@ A simple image gallery made with ReactJS.
 
 
 
-#### React:
+#### Technologies:
+* ReactJS
 
-
+### Final Product
+!["Main Page"](https://github.com/arslanah99/interviewQuestionAssignment/blob/master/assets/Screenshot%20from%202019-07-03%2000-10-22.png)
+!["Zoomed in on an Image"](https://github.com/arslanah99/interviewQuestionAssignment/blob/master/assets/Screenshot%20from%202019-07-03%2000-10-48.png?raw=true)

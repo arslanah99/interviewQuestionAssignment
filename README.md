@@ -1,5 +1,8 @@
 # Image Gallery
 
+## Live Link
+(https://images-gallerys.herokuapp.com/)
+
 ## Project Description
 
 A simple image gallery made with ReactJS.

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./Image.css";
-import Popup from './Popup.js'
-
-
+import Popup from "./Popup.js";
 
 class ImageSource extends Component {
   constructor(props) {
@@ -22,17 +20,16 @@ class ImageSource extends Component {
         "https://images.unsplash.com/photo-1562060726-1928f538a53f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
       ],
       showModal: false,
-      popImageUrl: ''
+      popImageUrl: ""
     };
   }
 
-  handlePopup = (url) => {
-      this.setState({
-          showModal: !this.state.showModal,
-          popImageUrl: url
-    })
-  }
-
+  handlePopup = url => {
+    this.setState({
+      showModal: !this.state.showModal,
+      popImageUrl: url
+    });
+  };
 
   handleLinkChange = e => {
     e.preventDefault();
@@ -55,7 +52,13 @@ class ImageSource extends Component {
     let imageUrlArray = this.state.imageUrlsArray;
     console.log(imageUrlArray);
     let images = imageUrlArray.map(url => {
-      return <img  className="singleImage" src={url} onClick={() => this.handlePopup(url)}/>;
+      return (
+        <img
+          className="singleImage"
+          src={url}
+          onClick={() => this.handlePopup(url)}
+        />
+      );
     });
     //returning images
     return (
@@ -68,16 +71,18 @@ class ImageSource extends Component {
             placeholder="Please insert image link"
             onChange={this.handleLinkChange}
           />
-          <button type="submit" className="submitButton">Submit Image</button>
+          <button type="submit" className="submitButton">
+            Submit Image
+          </button>
         </form>
         <div className="container">
-          <div>{images}</div>{this.state.showModal ? 
-          <Popup
-            popImageUrl = {this.state.popImageUrl}
-            closePopup = {this.handlePopup}            
-          />
-          : null
-        }
+          <div>{images}</div>
+          {this.state.showModal ? (
+            <Popup
+              popImageUrl={this.state.popImageUrl}
+              closePopup={this.handlePopup}
+            />
+          ) : null}
         </div>
       </div>
     );

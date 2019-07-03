@@ -1,29 +1,28 @@
-
-
-.container{
+.container {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  align-content: flex-start
+  align-content: flex-start;
 }
 
-.singleImage{
+.singleImage {
   padding: 0 20px 20px;
   height: 300px;
   border-radius: 34;
 }
 
-.singleImage:hover{
+.singleImage:hover {
   padding: 5px;
   /* opacity: .5; */
-  transition: .9s;
-  transform: scale(1.24); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  
+  transition: 0.9s;
+  transform: scale(
+    1.24
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-.popupParent{
+.popupParent {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -32,7 +31,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: rgba(0,0,0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popupImage {
@@ -44,7 +43,6 @@
   margin: auto;
 }
 
-.imageClosingButton{
+.imageClosingButton {
   position: relative;
-
 }
